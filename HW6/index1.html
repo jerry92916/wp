@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>側邊欄</title>
+<style>
+  .profile-card {
+    width: 300px;
+    height: 100px; 
+    max-width: 1000px;
+    max-height: 200px; 
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+
+  .profile-info {
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    top: 0;
+    right: -700px; 
+    width: 700px; 
+    height: 100%; 
+  }
+
+  .profile-card:hover {
+    width: 1000px;
+    height: 200px;
+  }
+
+  .profile-card:hover .profile-info {
+    opacity: 1;
+    right: 0; 
+  }
+</style>
+</head>
+<body>
+
+<div class="profile-card">
+  <div class="profile-info">
+    <h2>我是陳宏傑</h2>
+    <p>生日：92年9月16日</p>
+    <p>興趣：打羽球</p>
+  </div>
+</div>
+
+</body>
+</html>
