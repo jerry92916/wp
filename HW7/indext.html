@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHA256 Hash Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        label {
+            margin-right: 10px;
+        }
+        textarea {
+            resize: none;
+            font-size: large;
+            width: 100%;
+            max-width: 600px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SHA256 Hash Calculator</h1>
+    </header>
+
+    <div class="main-section">
+        <div class="input-section">
+            <label>Data:</label>
+            <textarea id="data_block" rows="10" oninput="hash()"></textarea>
+        </div>
+        <div class="output-section">
+            <label>Hash:</label>
+            <textarea disabled id="output_block" rows="1"></textarea>
+        </div>
+    </div>
+
+    <script>
+        function hash() {
+            var data = document.getElementById('data_block').value;
+            var hashValue = CryptoJS.SHA256(data).toString(CryptoJS.enc.Hex);
+            document.getElementById('output_block').value = hashValue;
+        }
+    </script>
+</body>
+</html>
