@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隨機移動按鈕</title>
+<style>
+    #moveButton {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+</style>
+</head>
+<body>
+<button id="moveButton" onclick="moveButton()">快點按我~~</button>
+
+<script>
+var button = document.getElementById('moveButton');
+
+setInterval(moveButton, 500);
+
+function moveButton() {
+    var newX = Math.random() * window.innerWidth;
+    var newY = Math.random() * window.innerHeight;
+
+    button.style.left = newX + 'px';
+    button.style.top = newY + 'px';
+
+    var colors = ['#e74c3c', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c', '#3498db'];
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    button.style.backgroundColor = randomColor;
+
+    var currentTransition = parseFloat(window.getComputedStyle(button).transitionDuration);
+    var newTransition = currentTransition * 0.9; 
+    button.style.transitionDuration = newTransition + 's';
+}
+</script>
+</body>
+</html>
