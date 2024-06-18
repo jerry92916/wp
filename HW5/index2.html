@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按按鈕右移</title>
+    <style>
+        .move-button {
+            font-size: 16px;
+            position: relative;
+            transition: left 0.3s; 
+        }
+    </style>
+</head>
+<body>
+    <button class="move-button" onclick="move()">快點按我~~</button>
+
+    <script>
+        function move() {
+            const button = document.querySelector('.move-button');
+            const currentLeft = parseInt(window.getComputedStyle(button).left, 10) || 0;
+            button.style.left = (currentLeft + 10) + 'px';
+        }
+    </script>
+</body>
+</html>
