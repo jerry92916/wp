@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>歌曲選擇</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+  }
+  .container {
+    padding: 20px;
+  }
+  .button {
+    background-color: #808080;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <button class="button" onclick="openIUChannel()">IU的歌</button>
+  <button class="button" onclick="openLeSserafimChannel()">LE SSERAFIM的歌</button>
+  <button class="button" onclick="openBTSChannel()">BTS的歌</button>
+</div>
+
+<div class="container">
+  <h2>選擇一首歌</h2>
+</div>
+
+<script>
+  function openIUChannel() {
+    window.open('https://www.youtube.com/watch?v=TgOu00Mf3kI', '_blank');
+  }
+
+  function openLeSserafimChannel() {
+    window.open('https://www.youtube.com/watch?v=ADKDX-H8SJg', '_blank');
+  }
+
+  function openBTSChannel() {
+    window.open('https://www.youtube.com/watch?v=WMweEpGlu_U', '_blank');
+  }
+</script>
+
+</body>
+</html>
