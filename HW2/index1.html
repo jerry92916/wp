@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>註冊表單(有css)</title>
+    <style>
+        body {
+            background-color: #E0F7FA;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #00796B;
+        }
+        input[type="text"], 
+        input[type="date"], 
+        input[type="email"], 
+        input[type="tel"], 
+        select, 
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #B2DFDB;
+            border-radius: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #00796B;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #004D40;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit_registration" method="post">
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="gender">性別：</label>
+        <input type="radio" id="male" name="gender" value="male" required>男
+        <input type="radio" id="female" name="gender" value="female" required>女
+
+        <label for="dob">出生年月日：</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="email">電子信箱：</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="blood-type">血型：</label>
+        <select id="blood-type" name="blood-type" required>
+            <option value="A">A型</option>
+            <option value="B">B型</option>
+            <option value="AB">AB型</option>
+            <option value="O">O型</option>
+        </select>
+
+        <label for="phone">電話：</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="address">住址：</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+
+        <input type="submit" value="註冊">
+    </form>
+</body>
+</html>
