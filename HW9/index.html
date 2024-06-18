@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蓋印章</title>
+<style>
+    canvas {
+        border: 1px solid black;
+        cursor: crosshair; 
+    }
+</style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+
+<script>
+
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+
+    canvas.addEventListener('click', function(event) {
+        var x = event.offsetX; 
+        var y = event.offsetY; 
+
+        drawCircle(x, y);
+
+        drawCross(x, y);
+    });
+
+    function drawCircle(x, y) {
+        context.beginPath();
+        context.arc(x, y, 20, 0, 2 * Math.PI);
+        context.strokeStyle = 'blue'; 
+        context.stroke();
+    }
+
+
+    function drawCross(x, y) {
+        context.beginPath();
+        context.moveTo(x - 15, y - 15);
+        context.lineTo(x + 15, y + 15);
+        context.moveTo(x + 15, y - 15);
+        context.lineTo(x - 15, y + 15);
+        context.strokeStyle = 'red'; 
+        context.stroke();
+    }
+</script>
+</body>
+</html>
