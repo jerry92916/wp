@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #faf8ef;
+    font-family: Arial, sans-serif;
+}
+#game-container {
+    text-align: center;
+}
+#board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    margin: 20px auto;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #cdc1b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.cell[data-value="2"] {
+    background-color: #eee4da;
+    color: #776e65;
+}
+.cell[data-value="4"] {
+    background-color: #ede0c8;
+    color: #776e65;
+}
+#message {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+    margin-top: 20px;
+}
