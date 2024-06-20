@@ -57,6 +57,7 @@ CSS設計的部分參考chatgpt，隨機移動按鈕的JavaScript參考chatgpt(�
 [原始碼](https://github.com/jerry92916/wp/blob/master/HW6/index2.html)
 
 1.CSS參考chatgpt，其他自己打
+
 操作說明:將鼠標移動到側欄，就會出現我的一些自我介紹
 
 2.CSS參考chatgpt，JavaScript一半自己打一半參考chatgpt。照片跟作業1的問題一樣，用自己電腦沒問題，上傳到github就消失了
