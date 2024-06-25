@@ -2,7 +2,7 @@
 [網頁](https://jerry92916.github.io/-2048/?fbclid=IwZXh0bgNhZW0CMTAAAR2jRUJbGqaSrAEvhrK6CuYlZQTjflHMkDLEl-QZutUOOW37hEEC1x5JNj4_aem_ZmFrZWR1bW15MTZieXRlcw)
 [原始碼](https://github.com/jerry92916/wp/tree/master/%E6%9C%9F%E4%B8%AD%E4%BD%9C%E6%A5%AD)
 
-html跟CSS參考2048遊戲網站原始程式碼，JavaScript參考chatgpt(看懂2/3)
+html跟CSS參考2048遊戲網站原始程式碼，JavaScript參考chatgpt跟網路2048遊戲相關設計教學
 
 操作說明:利用方向鍵控制數字移動
 ****
